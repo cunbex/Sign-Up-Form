@@ -5,11 +5,66 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="icon" href="images/image.png">
+  <script src="script/script.js" defer></script>
+  <script src="script/test.js" defer></script>
   <title>Sign-Up-Form</title>
 </head>
 
 <body>
-
+  <main>
+    <section class="hero-container">
+      <div class="logo-container">
+        <img src="images/image.png" alt="Orbell logo">
+        <p>ORBELL</p>
+      </div>
+    </section>
+    <section class="form-container">
+      <div class="text-container">
+        <p>
+          This is not a real online service! You know you need something like this in your life to help you realize your
+          deepest dreams.
+          SIgn up now to get started.
+        </p>
+        <p>You know you want to.</p>
+      </div>
+      <form>
+        <p>
+          <label for="name">
+            <span>Name: </span>
+            <strong><span aria-label="required">*</span></strong>
+          </label>
+          <input placeholder="Jake" type="text" id="name" name="username" minlength="5" maxlength="10" required />
+        </p>
+        <p>
+          <label for="mail">
+            <span>Email: </span>
+            <strong><span aria-label="required">*</span></strong>
+          </label>
+          <input placeholder="example@gmail.com" type="email" id="mail" name="usermail" required />
+        </p>
+        <p>
+          <label for="pwd">
+            <span>Password: </span>
+            <strong><span aria-label="required">*</span></strong>
+          </label>
+          <input type="password" id="pwd" name="pwd" required />
+          <span id="message1"></span>
+        </p>
+        <p>
+          <label for="conf-pwd">
+            <span>Confirm password: </span>
+            <strong><span aria-label="required">*</span></strong>
+          </label>
+          <input type="password" id="conf_pwd" name="conf_pwd" required />
+          <span id="message2"></span>
+        </p>
+        <button class="sign-up-button" type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="#">Log in</a></p>
+    </section>
+  </main>
 </body>
 
 </html>
