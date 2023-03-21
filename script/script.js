@@ -26,16 +26,13 @@ function verifyPassword(pw) {
 }
 
 function verifyPasswordConfirmation() {
-  if (conf_pwd.value.length !== pwd.value.length) {
-    return "Password and confirm password do not match";
-  } else if (
-    conf_pwd.value === pwd.value &&
-    verifyPassword(pwd.value) !== "Good password"
-  ) {
-    return "Matched passwords without conditions ";
-  } else if (conf_pwd.value === pwd.value) {
-    return "Matched passwords";
+  if (conf_pwd.value !== pwd.value) {
+    return "Password and confirm password do not match.";
   }
+  if (verifyPassword(pwd.value) !== "Good password") {
+    return "Password does not meet requirements.";
+  }
+  return "Matched passwords";
 }
 
 function updateMessage1(message) {
@@ -89,6 +86,6 @@ form.addEventListener("submit", (e) => {
     confirm("Success.");
   } else {
     e.preventDefault();
-    confirm("It clearly says passwords don't match/wrong password input x)!");
+    confirm("Password does not match or does not meet requirements.");
   }
 });
